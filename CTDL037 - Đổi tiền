@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int t; cin>>t;
+    while(t--){
+        int n; cin>>n;
+        int cnt=0;
+        while(n>0){
+            if(n>=1000){
+                cnt++;
+                n-=1000;
+                continue;
+            }
+            if(n>=500){
+                cnt++;
+                n-=500;
+                continue;
+            }
+            if(n>=200){
+                cnt++;
+                n-=200;
+                continue;
+            }
+            if(n>=100){
+                cnt++;
+                n-=100;
+                continue;
+            }
+            if(n>=50){
+                cnt++;
+                n-=50;
+                continue;
+            }
+            if(n>=20){
+                cnt++;
+                n-=20;
+                continue;
+            }
+            if(n>=10){
+                cnt++;
+                n-=10;
+                continue;
+            }
+            if(n>=5){
+                cnt++;
+                n-=5;
+                continue;
+            }
+            if(n>=2){
+                cnt++;
+                n-=2;
+                continue;
+            }
+            if(n=1){
+                cnt++;
+                n-=1;
+                break;
+            }
+        }
+        cout<<cnt<<endl;
+    }
+    return 0;
+}
