@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int t; cin>>t;
+    while(t--){
+        int n; cin>>n;
+        string s="";
+        while(n>0){
+            char a=(n%2)+'0';
+            n/=2;
+            s=a+s;
+        }
+        char a[100];
+        a[0]=s[0];
+        for(int i=1;i<s.size();i++){
+            if(s[i-1]=='1'){
+                if(s[i]=='1') a[i]='0';
+                else a[i]='1';
+            }else{
+                a[i]=s[i];
+            }
+        }
+        
+        int res=0;
+        for(int i=s.size()-1;i>=0;i--){
+            res+=pow(2,s.size()-1-i)*(a[i]-'0');
+        }
+        cout<<res<<endl;
+    }
+}
